@@ -1,0 +1,79 @@
+@CHARSET "UTF-8";
+
+.page-admin-produit h2{
+	font-size:1.5em;
+	color:#F2AC43;
+	padding-left:40px;
+	padding-top:5px;
+	background-image:url('../images/icones/produit.png');
+	background-repeat:no-repeat;
+	height:32px;
+
+}
+
+.page-admin-produit .ajout-produit{
+	margin-top:6px;
+	margin-bottom:15px;
+}
+
+.liste-produits{
+	margin-bottom:5px;
+}
+
+.liste-produits .produit{
+	background-color:#478CD9;
+	color:white;
+	position:relative;
+	min-height:30px;
+}
+
+.liste-produits .produit span{
+	padding:5px;
+	padding-left:64px;
+	display:block;
+}
+
+.liste-produits .produit a span{
+	display:none;
+}
+
+.liste-produits .ligne-grey{
+	background-color:#6FA9EA;
+}
+
+.liste-produits a.supprimer,
+.liste-produits a.modifier{
+	position:absolute;
+	top:50%;
+	margin-top:-13px;
+	display:block;
+	width:26px;
+	height:26px;
+	background-repeat:no-repeat;
+}
+
+.liste-produits a.supprimer{
+	background-image:url('../images/icones/supprimer-produit.png');
+	left:34px;
+}
+
+.liste-produits a.modifier{
+	background-image:url('../images/icones/modifier-produit.png');
+	left:4px;
+}
+
+.page-admin-produit .suppression-ok,
+.page-admin-produit .suppression-echec{
+	padding:5px;
+	margin-bottom:10px;
+	text-align:center;
+}
+
+.page-admin-produit .suppression-ok{
+	background-color:#68F859;
+}
+
+.page-admin-produit .suppression-echec{
+	background-color:#A70000;
+	color:white;
+}

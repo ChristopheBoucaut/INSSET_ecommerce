@@ -1,0 +1,38 @@
+<div class="liste-panier">
+	<h2>Votre panier !</h2>
+	<?php
+	
+		if($this->modifs['suppression']){
+			echo '<div class="modif-panier">Certains des produits de votre panier ont été supprimés car ils ne sont plus en stock ou bien enlevé du panier.</div>';
+		}
+		if($this->modifs['modification']){
+			echo '<div class="modif-panier">Certains des produits de votre panier ont été mis à jour car le stock a diminué et donc nous avons du baisser la quantité de ce produit dans votre panier.</div>';
+		}
+		
+	?>
+	
+	<?php if($this->panier_vide):?>
+		<div class="modif-panier">Votre Panier est vide</div>
+	<?php else:?>
+		<h3>Vous pouvez encore y apporter des modification :</h3>
+		<div class="informations information-suppression">Informations : Remplissez le champs par 0 pour supprimer un produit de votre panier.</div>
+		<div class="legende-colonne">
+			<div class="legende-colonne1">Nom du produit - prix à l'unité</div>
+			<div class="legende-colonne2">Prix par rapport à la quantité</div>
+			<div class="legende-colonne3">Quantité désirée / total de produits encore en stock</div>
+		</div>
+		<div class="stop-float"></div>
+		<?php
+		
+			echo $this->form_liste_panier;
+		
+		?>
+		<div class="prix-total-panier">
+			Valeur totale de votre panier : <span><?php echo $this->prix_total; ?>€</span> pour vos <span><?php echo $this->nb_total; ?></span> produits.
+		</div>
+		<div class="boutons-bas-page">
+			<a href="<?php echo $this->baseUrl('panier/valider'); ?>" class="bouton">Passer votre commande</a>
+			<a href="<?php echo $this->baseUrl('panier/vider'); ?>" class="bouton">Vider le panier</a>
+		</div>
+	<?php endif;?>
+</div>

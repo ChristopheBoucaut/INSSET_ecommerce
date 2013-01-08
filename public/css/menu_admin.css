@@ -1,0 +1,19 @@
+@CHARSET "UTF-8";
+
+#content-menu .menu-admin{
+	border:2px solid #8BB8EA;
+	padding:3px;
+	color:#0E4178;
+}
+
+#content-menu .menu-admin li{
+	margin-bottom:5px;
+}
+
+#content-menu .menu-admin a{
+	color:#478CD9;
+}
+
+#content-menu .menu-admin a:hover{
+	color:#F2AC43;
+}

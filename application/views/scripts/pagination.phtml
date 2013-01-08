@@ -1,0 +1,74 @@
+<?php 
+
+/**
+ * Fichier gérant le controle de la pagination
+ * @file: pagination.phtml
+ *
+ * @author: Christophe BOUCAUT
+ * @version: 1.0
+ *
+ * @changelogs:
+ * Rev 1.0 du 25 nov. 2012
+ * - Version initiale
+ *
+ **/
+
+// On récupère les éventuels parametres déjà présents
+$param_request = Zend_Controller_Front::getInstance()->getRequest()->getParams();
+$param_url=array();
+foreach($param_request as $cle => $val){
+	if($cle != 'action' && $cle != 'controller' && $cle != 'module'){
+		$param_url[$cle]= $val;
+	}
+}
+
+?>
+
+<?php if ($this->pageCount): ?>
+<div class="pagination">
+	<div class="navigation">
+		<?php if($this->current != $this->first):?>
+			<!-- Lien vers la page précédente -->
+			<div class="page-precedente lien-bleu">
+				<a href="<?php echo $this->url(array_merge($param_url,array("page"=>$this->previous))); ?>">&#060; Précedente</a>
+			</div>
+		<?php endif;?>
+		<?php if(isset($this->pagesInRange)):?>
+			<span class="all-pages">
+				<!-- Affichage des pages possibles -->
+				<?php
+					foreach($this->pagesInRange as $page){
+						if($page!=$this->current){
+							echo "&#032;<a href='".$this->url(array_merge($param_url,array("page"=>$page)))."'>".$page."</a>&#032;";
+						}elseif($page==$this->current){
+							echo "<span class='current_page'>".$page."</span>";
+						}
+					}
+				?>
+			</span>
+		<?php endif;?>
+		<?php if($this->current != $this->last):?>
+			<!-- Lien vers la page suivante -->
+			<div class="page-suivante lien-bleu">
+				<a href="<?php echo $this->url(array_merge($param_url,array("page"=>$this->next))); ?>">Suivante &#062;</a>
+			</div>
+		<?php endif;?>
+	</div>
+	
+	<div class="large-navigation">
+		<?php if($this->current != $this->first):?>
+			<!-- Lien vers la première page -->
+			<div class="aller-premiere-page lien-bleu">
+				<a href="<?php echo $this->url(array_merge($param_url,array("page"=>$this->first))); ?>">&#060;&#060; Aller à la première page</a>
+			</div>
+		<?php endif;?>
+		
+		<?php if($this->current != $this->last):?>
+			<!-- Lien vers la dernière page -->
+			<div class="aller-derniere-page lien-bleu">
+				<a href="<?php echo $this->url(array_merge($param_url,array("page"=>$this->last))); ?>">Aller à la dernière page &#062;&#062;</a>
+			</div>
+		<?php endif;?>
+	</div>
+</div>
+<?php endif; ?>

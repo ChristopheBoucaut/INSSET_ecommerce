@@ -1,0 +1,25 @@
+@CHARSET "UTF-8";
+
+.ajout-produit h2{
+	font-size:1.5em;
+	color:#F2AC43;
+	padding-left:43px;
+	padding-top:5px;
+	background-image:url('../images/icones/ajout_produit.png');
+	background-repeat:no-repeat;
+	height:35px;
+
+}
+
+.ajout-produit .bouton-annuler{
+	margin-top:10px;
+}
+
+.ajout-produit .errors{
+	color:#B70000;
+	margin-bottom:10px;
+}
+
+.ajout-produit #description_produit{
+	height:180px;
+}

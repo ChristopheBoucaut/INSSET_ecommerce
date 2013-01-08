@@ -1,0 +1,67 @@
+@CHARSET "UTF-8";
+
+.informations-client h2{
+	font-size:1.5em;
+	color:#F2AC43;
+	padding-left:40px;
+	padding-top:5px;
+	background-image:url('../images/icones/question.png');
+	background-repeat:no-repeat;
+	height:32px;
+
+}
+
+.informations-client h3{
+	font-size:1.1em;
+	color:#F2AC43;
+	margin-bottom:10px;
+}
+
+#form-informations-client>div{
+	clear:both;
+}
+
+#form-informations-client label,
+#form-informations-client span.separator,
+#form-informations-client input{
+	display:block;
+	float:left;
+}
+
+#form-informations-client label{
+	width:200px;
+}
+
+#form-informations-client span.separator{
+	margin-left:5px;
+	margin-right:5px;
+}
+
+#form-informations-client input.informations-clients{
+	width:200px;
+}
+
+#form-informations-client input.informations-clients-submit{
+	min-width:100px;
+}
+
+#form-informations-client ul.errors{
+	clear:both;
+	color:white;
+	padding-top:5px;
+	margin-bottom:13px;
+}
+
+#form-informations-client ul.errors li{
+	background-color:#A70000;
+	display:inline;
+	padding:3px;
+	
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.informations-client .retour-panier{
+	padding-top:15px;
+}

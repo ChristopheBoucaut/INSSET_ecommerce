@@ -1,0 +1,13 @@
+<div class="informations-client">
+	<h2>Informations personnelles !</h2>
+	<h3>Avant de continuer, nous avons besoin d'informations sur vous pour la commande :</h3>
+	<?php
+		echo $this->form_informations_client;
+	?>
+	<div class="stop-float"></div>
+	<?php
+		if($this->modifier){
+			echo "<div class='retour-panier'><a href='".$this->baseUrl('panier/afficher')."' class='bouton'>Retour au panier</a></div>"; 
+		}
+	?>
+</div>

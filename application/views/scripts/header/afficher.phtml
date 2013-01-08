@@ -1,0 +1,21 @@
+<div id="content-header">
+	<div class="first-content-header">
+		<h1 title="Mais surtout de rien !" class="titre">
+			<a href="<?php echo $this->baseUrl('index/index')?>" class="retour-accueil">De tout et de rien</a>
+		</h1>
+		<div class="logo" title="Inutile donc indispensable !"></div>
+	</div>
+	<div class="second-content-header">
+		<p>Promotion sur les sacs à mains !<br/>-50% !</p>
+		<img class="icone-promo-gauche" src="<?php echo $this->baseUrl()."/images/icones/offer_50.png"?>" title="-50% sur les sacs à mains !" alt="-50% sur les sacs à mains !"/>
+		<img class="icone-promo-droite" src="<?php echo $this->baseUrl()."/images/icones/offer_50.png"?>" title="-50% sur les sacs à mains !" alt="-50% sur les sacs à mains !"/>
+	</div>
+	<div class="last-content-header">
+		<?php
+			if($this->last_header == "recap_panier"){
+				echo $this->action('recapitulatif', 'panier');
+			}else{
+				echo $this->action('boutondeco', 'admin');
+			}?>
+	</div>
+</div>

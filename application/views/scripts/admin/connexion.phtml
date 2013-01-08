@@ -1,0 +1,14 @@
+<div class="connexion">
+	<h2>Connexion</h2>
+	<?php 
+	
+		if($this->need_connexion){
+			echo "Une connexion est nécessaire pour accéder à la page désirée.<br/><br/>";
+		}
+		if($this->error_connexion){
+			echo "<div class='errors'>Erreur de connexion.<br/>Vérifier que vous avez utilisé le bon login et mot de passe.<br/><br/></div>";
+		}
+		echo $this->form_connexion;
+	
+	?>
+</div>

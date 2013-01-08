@@ -1,0 +1,9 @@
+<div class="page-validation-commande">
+	<h2>Enregistrement de votre commande</h2>
+	<?php if($this->error): ?>
+		<div class="error">La commande n'a pas pu être enregistrée. Si le problème persiste, veuillez contacter l'administrateur.</div>
+	<?php endif;?>
+	<?php if($this->mail): ?>
+		<div class="validation-commande">Votre commande a été enregistrée et un mail récapitulatif vous a été envoyé.</div>
+	<?php endif;?>
+</div>

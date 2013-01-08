@@ -1,0 +1,34 @@
+@CHARSET "UTF-8";
+
+.page-admin-clients h2{
+	font-size:1.5em;
+	color:#F2AC43;
+	padding-left:40px;
+	padding-top:5px;
+	background-image:url('../images/icones/client.png');
+	background-repeat:no-repeat;
+	height:32px;
+
+}
+
+.liste-client .gras{
+	font-weight:bold;
+}
+
+.liste-client .nom-client{
+	font-weight:bold;
+}
+
+.liste-client .client{
+	color:white;
+	background-color:#478CD9;
+	padding:5px;
+}
+
+.liste-client .ligne-grey{
+	background-color:#6FA9EA;
+}
+
+.liste-client {
+	margin-bottom:5px;
+}

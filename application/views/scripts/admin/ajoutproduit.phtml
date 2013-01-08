@@ -1,0 +1,13 @@
+<div class="ajout-produit">
+	<h2>Ajout d'un nouveau produit !</h2>
+	<?php if($this->validation_ajout):?>
+	<div class="error-ajout-produit error">Une erreur est survenue lors de l'ajout du produit. Veuillez contacter l'administrateur si le problème persiste.</div>
+	<?php endif;?>
+	
+	<?php
+		echo $this->form_ajout_produit;
+	?>
+	<div class="bouton-annuler">
+		<a href="<?php echo $this->baseUrl('admin/produit');?>" class="bouton">Annuler</a>
+	</div>
+</div>

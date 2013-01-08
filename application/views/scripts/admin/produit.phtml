@@ -1,0 +1,39 @@
+<?php
+	$class_grey=false; 
+?>
+<div class="page-admin-produit">
+	<h2>Liste des produits</h2>
+	<?php if($this->validation_suppression):?>
+	<div class="suppression-ok"><span>La suppression du produit a réussie.</span></div>
+	<?php endif;?>
+	<?php if($this->error_suppression):?>
+	<div class="suppression-echec"><span>La suppression du produit a échoué.</span></div>
+	<?php endif;?>
+	<div class="ajout-produit">
+		<a href="<?php echo $this->baseUrl('admin/ajoutproduit');?>" title="Ajouter un nouveau produit" class="bouton">Ajouter un nouveau produit</a>
+	</div>
+	<ul class="liste-produits">
+	<?php foreach ($this->produits as $produit):?>
+		<li<?php 
+			$str = ' class="produit';
+			if($class_grey){
+				$str.=' ligne-grey';
+				$class_grey=false;
+			}else{
+				$class_grey=true;
+			}
+			$str.='"';
+			echo $str;
+		?>
+		>
+			<span><?php echo $produit->nom_produit; ?></span>
+			<a href="<?php echo $this->baseUrl('admin/ajoutproduit')?>?id_produit=<?php echo $produit->id_produit; ?>" class="modifier" title="Modifier '<?php echo $produit->nom_produit; ?>'"><span>Modifier produit</span></a>
+			<a href="<?php echo $this->baseUrl('admin/supprimerproduit');?>?id_produit=<?php echo $produit->id_produit; ?>" class="supprimer" title="Supprimer '<?php echo $produit->nom_produit; ?>'"><span>Supprimer produit</span></a>
+		</li>
+	<?php endforeach;?>
+	</ul>
+	<?php 
+		// Permet d'afficher le controlle de la pagination
+		echo $this->paginationControl($this->produits, 'Elastic', 'pagination.phtml');
+	?>
+</div>

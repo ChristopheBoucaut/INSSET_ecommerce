@@ -1,0 +1,104 @@
+@CHARSET "UTF-8";
+
+.liste-commandes{
+	margin-bottom:5px;
+	width:100%;
+}
+
+.liste-commandes .colonne-client{
+	width:350px;
+}
+
+.liste-commandes .colonne-date{
+	width:100px;
+}
+
+.liste-commandes .colonne-montant{
+	width:150px;
+}
+
+.liste-commandes .info-clients{
+	display:none;
+	position:absolute;
+	top:50%;
+	left:50%;
+	background-color:white;
+	color:black;
+	z-index:5;
+	border:1px solid black;
+	padding:5px;
+	padding-top:20px;
+}
+
+.liste-commandes .info-clients a{
+	color:white;
+	background-color:#A70000;
+	text-decoration:none;
+	padding:2px;
+	padding-top:0px;
+	border-left:1px solid black;
+	border-bottom:1px solid black;
+	position:absolute;
+	top:0px;
+	right:0px;
+	font-size:0.850em;
+}
+
+
+.page-admin-commande h2{
+	font-size:1.5em;
+	color:#F2AC43;
+	padding-left:40px;
+	padding-top:5px;
+	background-image:url('../images/icones/commande.png');
+	background-repeat:no-repeat;
+	height:32px;
+
+}
+
+.liste-commandes th a,
+.liste-commandes th{
+	color:#F2AC43;
+}
+
+.liste-commandes th a.asc,
+.liste-commandes th a.desc{
+	padding-left:20px;
+	min-height:16px;
+	background-repeat:no-repeat;
+	background-position:left center;
+}
+
+.liste-commandes th a.asc{
+	background-image:url('../images/icones/fleche_bas.png');
+}
+
+.liste-commandes th a.desc{
+	background-image:url('../images/icones/fleche_haut.png');
+}
+
+.liste-commandes th,
+.liste-commandes td{
+	border:1px solid #F2AC43;
+	padding:5px;
+	text-align:center;
+	position:relative;
+}
+
+.liste-commandes tr{
+	background-color:#478CD9;
+	position:relative;
+}
+
+.liste-commandes tr,
+.liste-commandes tbody tr a{
+	color:white;
+}
+
+.liste-commandes .ligne-grey{
+	background-color:#6FA9EA;
+}
+
+a.bouton{
+	display:block;
+}

@@ -1,0 +1,35 @@
+@CHARSET "UTF-8";
+
+.page-validation-commande h2{
+	font-size:1.5em;
+	color:#F2AC43;
+	padding-left:40px;
+	padding-top:5px;
+	background-image:url('../images/icones/cadi.png');
+	background-repeat:no-repeat;
+	height:32px;
+
+}
+
+.page-validation-commande .validation-commande{
+	background-color:#68F859;
+}
+
+.page-validation-commande .error{
+	width:490px;
+	min-height:60px;
+	margin:auto;
+	margin-top:15px;
+	padding:10px 10px 10px 100px;
+	
+	background-color:#A70000;
+	color:white;
+	
+	background-image:url('../images/icones/erreur.png');
+	background-repeat:no-repeat;
+	background-position:10px center;
+	
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}

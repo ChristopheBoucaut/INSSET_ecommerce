@@ -1,0 +1,27 @@
+@CHARSET "UTF-8";
+
+#content-menu .menu-public{
+	border:2px solid #8BB8EA;
+	padding:3px;
+	color:#0E4178;
+}
+
+#content-menu .menu-public .input-radio{
+	padding-left:10px;
+}
+
+#content-menu .menu-public #Trier{
+	display:block;
+	margin:auto;
+	margin-top:5px;
+	color:#0E4178;
+	font-weight:bold;
+}
+
+#content-menu .menu-public select{
+	color:#0E4178;
+}
+
+#content-menu .menu-public #type_tri-label label{
+	font-size:1.2em;
+}

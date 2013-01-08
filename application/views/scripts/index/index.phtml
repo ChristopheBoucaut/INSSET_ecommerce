@@ -1,0 +1,36 @@
+<ul class="liste-produit">
+
+	<?php foreach($this->produits as $produit):?>
+		<li class="cadre-produit">
+			<ul class="informations-produit">
+				<li class="nom-produit">
+					<h2><?php echo $produit->nom_produit?></h2>
+				</li>
+				<li class="prix-produit">
+					<span class="text-before">Prix :</span>
+					<span class="text-prix"><?php echo $produit->prix_produit?>€</span>
+				</li>
+				<li class="description-produit" title="<?php echo $produit->description_produit?>">
+					<span class="text-before">Description :<br/></span>
+					<span class="text-description"><?php echo substr($produit->description_produit, 0, 100)."..."?></span>
+				</li>
+			<?php if($produit->stock_produit>0):?>
+				<li class="stock-produit">(<?php echo $produit->stock_produit?> en stock)</li>
+				<li class="icone-ajout" title="Ajouter à votre panier">
+					<a href="<?php echo $this->baseUrl('panier/ajouter')."?id_produit=".$produit->id_produit ?>"></a>
+				</li>
+			<?php else:?>
+				<li class="stock-produit">(Stock épuisé)</li>
+				<li class="icone-ravitaillement" title="En cours de réapprovisionnement"></li>
+			<?php endif;?>
+			</ul>
+		</li>
+	<?php endforeach;?>
+</ul>
+
+<div class="stop-float"></div>
+<?php 
+	// Permet d'afficher le controlle de la pagination
+	echo $this->paginationControl($this->produits, 'Elastic', 'pagination.phtml')
+?>
+

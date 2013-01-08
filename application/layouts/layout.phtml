@@ -1,0 +1,84 @@
+<?php
+	echo $this->doctype('XHTML1_STRICT');
+?>
+<html>
+	<head>
+		<title>De tout et de rien !</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link href="<?php echo $this->baseUrl(); ?>/css/general.css" media="screen" rel="stylesheet" type="text/css">
+		<link href="<?php echo $this->baseUrl(); ?>/css/resetcss.css" media="screen" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="<?php echo $this->baseUrl()?>/js/jquery.js"></script>
+		<?php 
+		//on ajoute le js pour la popup
+		if(Zend_Registry::isRegistered('needpopup') && Zend_Registry::get('needpopup')):?>
+			<script type="text/javascript" src="<?php echo $this->baseUrl()?>/js/popup.js"></script>
+		<?php endif;?>
+		
+		<?php
+			// on ajoute les fichiers css et js demandés lors de l'éxecution des controllers
+			if(Zend_Registry::isRegistered('css')){
+				foreach(Zend_Registry::get('css') as $nom_fichier){
+					echo '<link href="'.$this->baseUrl().'/css/'.$nom_fichier.'" media="screen" rel="stylesheet" type="text/css">';
+				}
+			}
+			if(Zend_Registry::isRegistered('js')){
+				foreach(Zend_Registry::get('js') as $nom_fichier){
+					echo '<script type="text/javascript" src="'.$this->baseUrl().'/js/'.$nom_fichier.'"></script>';
+				}
+			}
+		?>
+	</head>
+	<body>
+		<div id="main">
+			<?php
+				//on affiche l'header si c'est demandé
+				if(Zend_Registry::isRegistered('showheader') && !Zend_Registry::get('showheader')){
+					echo '<div id="header">';
+					echo $this->action('afficher', 'header');
+					echo '</div>';
+				}
+			?>
+			<div id="second-main">
+				<?php 
+					//on affiche le menu si c'est demandé
+					if(Zend_Registry::isRegistered('showmenu') && !Zend_Registry::get('showmenu')){
+						echo '<div id="menu-left">';
+						echo $this->action('afficher', 'menu');
+						echo '</div>';
+					}
+				?>
+				
+				<?php
+					if(Zend_Registry::isRegistered('showmenu') && Zend_Registry::get('showmenu')){
+						echo '<div id="content-only">';
+					}else{
+						echo '<div id="content">';
+					}
+				?>
+					<?php 
+						echo $this->layout()->content;
+						echo "</div>";
+					?>
+				<div class="stop-float"></div>
+			</div>
+			
+			<?php 
+				//on affiche le footer si c'est demandé
+				if(Zend_Registry::isRegistered('showfooter') && !Zend_Registry::get('showfooter')){
+					echo '<div id="footer">';
+					echo $this->action('afficher', 'footer');
+					echo '</div>';
+				}
+			?>
+		</div>
+		<?php 
+		//on ajoute les div pour la popup
+		if(Zend_Registry::isRegistered('needpopup') && Zend_Registry::get('needpopup')):?>
+			<div class="popup">
+				<div class="popup-content"></div>
+				<a href="" title="Ferme la popup" class="close-popup"></a>
+			</div>
+			<div class="background-popup"></div>
+		<?php endif;?>
+	</body>
+</html>

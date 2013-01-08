@@ -1,0 +1,33 @@
+@CHARSET "UTF-8";
+
+div.popup{
+	width:430px;
+	height:380px;
+	margin-left:-215px;
+	margin-top:-190px;
+	color:white;
+}
+
+div.popup .connexion{
+	padding:5px;
+}
+
+div.popup .connexion h2{
+	padding-left:20px;
+	min-height:16px;
+	background-image:url('../images/icones/key.png');
+	background-repeat:no-repeat;
+	background-position:left center;
+	font-size:1.5em;
+	color:#F2AC43;
+}
+
+div.popup #captcha-input-label{
+	margin-top:5px;
+	margin-bottom:5px;
+}
+
+div.popup .errors{
+	color:#A3261B;
+	font-weight:bold;
+}

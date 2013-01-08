@@ -1,0 +1,9 @@
+<div id="content-menu">
+	<?php 
+		if($this->type_menu=="admin"){
+			echo $this->action('admin', 'menu');
+		}else{
+			echo $this->action('public', 'menu');
+		}
+	?>
+</div>

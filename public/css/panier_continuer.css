@@ -1,0 +1,152 @@
+@CHARSET "UTF-8";
+
+.after_ajouter_panier{
+	height: 200px;	
+}
+
+/*
+ * Début définition erreur lors d'un ajout
+ */
+ 
+.error_after_ajouter_panier{
+	width:490px;
+	min-height:60px;
+	margin:auto;
+	margin-top:15px;
+	padding:10px 10px 10px 100px;
+	
+	background-color:#A70000;
+	color:white;
+	
+	background-image:url('../images/icones/erreur.png');
+	background-repeat:no-repeat;
+	background-position:10px center;
+	
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.accueuil_error_after_ajouter_panier{
+	margin-top:10px;
+}
+
+.accueuil_error_after_ajouter_panier a{
+	color:#8BB8EA;
+	font-weight:bold;
+}
+
+.accueuil_error_after_ajouter_panier a:hover{
+	color:#478CD9;
+}
+
+/*
+ * Fin définition erreur lors d'un ajout
+ */
+
+/*
+ * Début définition réussite lors d'un ajout
+ */
+
+.done_after_ajouter_panier,
+.liens-done_after_ajouter_panier{
+	position:relative;
+}
+
+.done_after_ajouter_panier{
+	width:500px;
+	margin:auto;
+	margin-top:20px;
+	min-height:40px;
+	
+	padding-left:80px;
+	
+	background-image:url('../images/icones/ok.png');
+	background-repeat:no-repeat;
+	background-position:30px center;
+	
+}
+
+.done_after_ajouter_panier .produit_ajoute{
+	color:#F2AC43;
+	font-weight:bold;
+}
+
+.liens-done_after_ajouter_panier{
+	position:relative;
+	width:500px;
+	margin:auto;
+}
+
+.liens-done_after_ajouter_panier .retour_accueil,
+.liens-done_after_ajouter_panier .acces_panier{
+	position:absolute;
+	top:0;
+	height:57px;
+	min-width:219px;
+}
+
+.liens-done_after_ajouter_panier .retour_accueil a,
+.liens-done_after_ajouter_panier .acces_panier a{
+	position:absolute;
+	width:207px;
+	height:36px;
+	top:11px;
+}
+
+.liens-done_after_ajouter_panier .retour_accueil a span,
+.liens-done_after_ajouter_panier .acces_panier a span{
+	color:#478CD9;
+}
+
+.liens-done_after_ajouter_panier .retour_accueil a:hover span,
+.liens-done_after_ajouter_panier .acces_panier a:hover span{
+	color:white;
+}
+
+
+.liens-done_after_ajouter_panier .retour_accueil{
+	left:0;
+	
+	background-image:url('../images/icones/fleche_gauche.png');
+	background-repeat:no-repeat;
+	background-position:left center;
+}
+
+.liens-done_after_ajouter_panier .retour_accueil a{
+	left:8px;
+}
+
+.liens-done_after_ajouter_panier .retour_accueil a span{
+	position:absolute;
+	top:8px;
+	left:40px;
+	text-decoration:underline;
+}
+
+.liens-done_after_ajouter_panier .acces_panier{
+	right:0;
+	padding-right:50px;
+	text-align:right;
+	
+	background-image:url('../images/icones/fleche_droite.png');
+	background-repeat:no-repeat;
+	background-position:right center;
+}
+
+.liens-done_after_ajouter_panier .acces_panier a{
+	right:8px;
+	text-align:right;
+}
+
+.liens-done_after_ajouter_panier .acces_panier a span{
+	position:absolute;
+	top:8px;
+	right:40px;
+	text-decoration:underline;
+}
+
+
+/*
+ * Fin définition réussite lors d'un ajout
+ */

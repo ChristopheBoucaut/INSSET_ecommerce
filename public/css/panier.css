@@ -1,0 +1,112 @@
+@CHARSET "UTF-8";
+
+.liste-panier h2{
+	font-size:1.5em;
+	color:#F2AC43;
+	padding-left:40px;
+	padding-top:5px;
+	background-image:url('../images/icones/panier_vert.png');
+	background-repeat:no-repeat;
+	height:32px;
+
+}
+
+.liste-panier h3{
+	font-size:1.1em;
+	color:#F2AC43;
+	margin-bottom:10px;
+}
+
+.liste-panier .information-suppression{
+	margin-bottom:10px;
+}
+
+.liste-panier .legende-colonne{
+	background-color:#478CD9;
+	height:40px;
+}
+
+.liste-panier .legende-colonne div{
+	float:left;
+	margin-bottom:10px;
+	height:100%;
+	color:white;
+	padding:2px;
+	text-align:center;
+}
+
+.liste-panier .legende-colonne1{
+	width:550px;
+	border-right:5px solid white;
+}
+
+.liste-panier .legende-colonne2{
+	width:135px;
+	border-right:5px solid white;
+}
+
+.liste-panier .legende-colonne3{
+	width:226px;
+}
+
+.liste-panier .formulaire-affichage-panier>div{
+	clear: both;
+	margin-bottom:5px;
+}
+
+.liste-panier .formulaire-affichage-panier .div-non-submit{
+	border-bottom:1px dotted #478CD9;
+}
+
+.liste-panier .formulaire-affichage-panier input{
+	width:40px;
+	text-align:right;
+	
+}
+
+.liste-panier .formulaire-affichage-panier input.submit{
+	width:100px;
+	text-align:center;
+}
+
+.liste-panier .formulaire-affichage-panier label{
+	width:550px;
+	display:block;
+	float:left;
+	margin-right:10px;
+}
+
+.liste-panier .formulaire-affichage-panier .prix-total-produit{
+	width:140px;
+	display:block;
+	float:left;
+	margin-right:10px;
+}
+
+.liste-panier .prix-total-panier span{
+	color:#A3261B;
+	font-weight:bold;
+}
+
+.liste-panier .boutons-bas-page{
+	margin-top:20px;
+}
+
+.liste-panier .modif-panier{
+	width:490px;
+	min-height:60px;
+	margin:auto;
+	margin-top:15px;
+	padding:10px 10px 10px 100px;
+	
+	background-color:#A70000;
+	color:white;
+	
+	background-image:url('../images/icones/erreur.png');
+	background-repeat:no-repeat;
+	background-position:10px center;
+	
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}

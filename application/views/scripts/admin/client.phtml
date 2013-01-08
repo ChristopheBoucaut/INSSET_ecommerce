@@ -1,0 +1,36 @@
+<?php
+	$class_grey=false; 
+?>
+
+<div class="page-admin-clients">
+	<h2>Liste des clients</h2>
+	<ul class="liste-client">
+		<?php foreach($this->clients as $client):?>
+			<li<?php 
+				$str = ' class="client';
+				if($class_grey){
+					$str.=' ligne-grey';
+					$class_grey=false;
+				}else{
+					$class_grey=true;
+				}
+				$str.='"';
+				echo $str;
+			?>
+			>
+				<span class="nom-client"><?php echo strtoupper($client->nom_client); ?></span>
+				<span class="prenom-client"><?php echo ucfirst($client->prenom_client); ?></span>
+				<br/>
+				<span class="mail-client">Adresse mail : <span class="gras"><?php echo $client->mail_client; ?></span></span>
+				<br/>
+				<span class="prix-total-commande">Valeur totale des commandes : <span class="gras"><?php echo $client->prix_total_commande; ?>€</span></span>
+				<br/>
+				<span class="date-derniere-commande">Date de la dernière commande : <span class="gras"><?php echo $client->date_derniere_commande; ?></span></span>
+			</li>
+		<?php endforeach;?>
+	</ul>
+	<?php
+	// Permet d'afficher le controlle de la pagination
+	echo $this->paginationControl($this->clients, 'Elastic', 'pagination.phtml');
+	?>
+</div>

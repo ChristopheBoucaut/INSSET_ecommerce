@@ -1,0 +1,34 @@
+<div class="after_ajouter_panier">
+	<?php if($this->erreur_ajout || $this->non_dispo_stock):?>
+		<div class="error_after_ajouter_panier">
+			<?php if($this->erreur_ajout):?>
+				Erreur lors de l'ajout dans le panier, aucun produit n'a été trouvé.<br/>
+				Si le problème persiste, veuillez prendre contact avec l'administrateur.<br/>
+				Veuillez nous excuser pour la gène occasionnée.
+			<?php endif;?>
+				<?php if($this->non_dispo_stock):?>
+				Vous avez déjà demandé une quantité équivalente au maximum du stock pour ce produit.
+			<?php endif;?>
+			<div class="accueuil_error_after_ajouter_panier">
+				<a href="<?php echo $this->baseUrl('index/index')?>">Retour à l'accueil</a>
+			</div>
+		</div>
+	<?php endif;?>
+	<?php if($this->produit_ajouter):?>
+		<div class="done_after_ajouter_panier">
+			Le produit "<span class="produit_ajoute"><?php echo $this->produit_ajouter; ?></span>" a été ajouté à votre panier.
+		</div>
+		<div class="liens-done_after_ajouter_panier">
+			<div class="retour_accueil">
+				<a href="<?php echo $this->baseUrl('index/index')?>" title="Continuer vos achats">
+					<span>Continuer vos achats</span>
+				</a>
+			</div>
+			<div class="acces_panier" >
+				<a href="<?php echo $this->baseUrl('panier/afficher')?>" title="Passer la commande">
+					<span>Passer la commande</span>
+				</a>
+			</div>
+		</div>
+	<?php endif;?>
+</div>

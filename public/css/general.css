@@ -1,0 +1,515 @@
+@CHARSET "UTF-8";
+
+html{
+	height:100%;
+}
+
+body{
+	height:100%;
+	background-color:#58738E;
+}
+
+.stop-float{
+	clear:both;
+}
+
+/*
+ * Début définition main
+ */
+
+#main{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:1em;
+	background-color:white;
+	margin:auto;
+	width:980px;
+	position:relative;
+}
+
+a.bouton{
+	text-decoration:none;
+	color:white;
+	background-color:#8BB8EA;
+	padding:5px;
+	
+	border:1px solid blue;
+	
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+a.bouton:hover{
+	background-color:#478CD9;
+}
+
+.informations{
+	font-style:italic;
+	color:#478CD9;
+}
+
+
+/*
+ * Fin définition main
+ */
+
+/*
+ * Début définition header
+ */
+
+#header{
+	height:104px;
+	background-color:#478CD9;
+}
+
+#content-header{
+	position:relative;
+	height:100%;
+	width:100%;
+}
+
+#content-header>div{
+	float:left;
+	position:relative;
+	height:100%;
+}
+
+#content-header .first-content-header{
+	width:280px;
+}
+
+#content-header .first-content-header,
+#content-header .second-content-header{
+	border-right:4px solid white;
+}
+
+#content-header .first-content-header .retour-accueil{
+	color:white;
+	text-decoration:none;
+}
+
+#content-header .first-content-header .titre{
+	width:125px;
+	height:50px;
+	position:absolute;
+	top:50%;
+	margin-top:-25px;
+	left:20px;
+	
+	color:white;
+	font-size:1.700em;
+	text-align:center;
+}
+
+#content-header .first-content-header .logo{
+	background-image:url('../images/logo.png');
+	width:100px;
+	height:101px;
+	
+	position:absolute;
+	top:50%;
+	margin-top:-50px;
+	left:160px;
+}
+
+#content-header .second-content-header{
+	position:relative;
+	width:396px;
+}
+
+#content-header .second-content-header p{
+	text-align:center;
+	font-size:1.600em;
+	color:white;
+	
+	position:absolute;
+	left:10px;
+	top:50%;
+	margin-top:-25px;
+}
+
+#content-header .second-content-header .icone-promo-gauche,
+#content-header .second-content-header .icone-promo-droite{
+	position:absolute;
+	bottom:10px;
+}
+
+#content-header .second-content-header .icone-promo-gauche{
+	left:10px;
+}
+
+#content-header .second-content-header .icone-promo-droite{
+	right:10px;
+}
+
+#content-header .last-content-header{
+	width:296px;
+}
+
+#content-header .last-content-header .panier{
+	position:absolute;
+	top:50%;
+	left:50%;
+	
+	width:266px;
+	height:84px;
+	
+	margin-top:-42px;
+	margin-left:-133px;
+	
+	background-color:#F2AC43;
+	
+	color:white;
+	font-size:1.650em;
+	text-align:center;
+	vertical-align:middle;
+	
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+#content-header .last-content-header .panier:hover{
+	background-color:#D68000;
+	text-decoration:underline;
+}
+
+#content-header .last-content-header .text-panier{
+	position:absolute;
+	top:15px;
+	left:15px;
+	text-decoration:inherit;
+}
+
+#content-header .last-content-header .nombre-produits{
+	font-size:0.750em;
+}
+
+#content-header .last-content-header .acces-panier{
+	display:block;
+	position:absolute;
+	width:266px;
+	height:84px;
+	
+	background-image:url('../images/acces_panier.png');
+	background-position:165px center;
+	background-repeat:no-repeat;
+}
+
+#content-header .last-content-header .deconnexion{
+	width:200px;
+	height:50px;
+	background-color:#B70000;
+	
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-left:-100px;
+	margin-top:-25px;
+	
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+#content-header .last-content-header .deconnexion:hover{
+	background-color:#D10000;
+}
+
+#content-header .last-content-header .text-deconnexion{
+	font-size:1.3em;
+	
+	position:absolute;
+	top:50%;
+	margin-top:-11px;
+	padding-left:40px;
+	
+	background-image:url('../images/icones/deconnexion.png');
+	background-position:10px center;
+	background-repeat:no-repeat;
+}
+
+#content-header .last-content-header .text-deconnexion a{
+	color:white;
+}
+
+#content-header .last-content-header .go-deconnexion{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+
+/*
+ * Fin définition header
+ */
+
+/*
+ * Début définition menu
+ */
+
+#menu-left{
+	float:left;
+	margin:10px 10px 5px 5px;
+	width:148px;
+}
+
+
+/*
+ * fin définition menu
+ */
+
+/*
+ * Début définition content
+ */
+
+#content{
+	float:left;
+	margin:10px 5px 5px 5px;
+	width:806px;
+}
+
+#content-only{
+	margin:10px 5px 5px 5px;
+}
+
+/*
+ * Fin définition content
+ */
+ 
+/*
+ * Début définition footer
+ */
+
+#footer{
+	height:80px;
+	width:950px;
+	margin:30px 15px 10px 15px;
+	padding-bottom:10px;
+}
+
+#content-footer{
+	background-color:#8BB8EA;
+	position:relative;
+	height:100%;
+}
+
+#content-footer>div{
+	float:left;
+	position:relative;
+	height:100%;
+	color:white;
+	padding:5px;
+}
+
+#content-footer .first-content-footer,
+#content-footer .second-content-footer{
+	border-right:4px solid white;
+}
+
+#footer #content-footer .first-content-footer{
+	width:175px;
+}
+
+#footer #content-footer .first-content-footer>div{
+	position:relative;
+}
+
+#footer #content-footer .first-content-footer>div>img{
+	margin:5px 5px 5px 5px;
+}
+
+#footer #content-footer .first-content-footer .lien-ratp{
+	position:absolute;
+	top:5px;
+	left:5px;
+	width:32px;
+	height:35px;
+}
+
+#footer #content-footer .first-content-footer .lien-amazon{
+	position:absolute;
+	top:5px;
+	left:49px;
+	width:107px;
+	height:32px;
+}
+
+#footer #content-footer .second-content-footer{
+	width:544px;
+}
+
+#footer #content-footer .last-content-footer{
+	width:175px;
+}
+
+#footer #content-footer .last-content-footer a{
+	color:white;
+}
+
+#footer #content-footer .last-content-footer .footer-panier{
+	background-image:url("../images/icones/mini-panier.png");
+	background-repeat:no-repeat;
+	background-position:3px center;
+	
+	padding-left:25px;
+	min-height:16px;
+}
+
+#footer #content-footer .last-content-footer .footer-admin{
+	background-image:url("../images/icones/key.png");
+	background-repeat:no-repeat;
+	background-position:3px center;
+	
+	padding-left:25px;
+	min-height:16px;
+}
+
+#footer #content-footer .last-content-footer .p-footer-admin{
+	margin-top:5px;
+}
+
+#footer #content-footer .last-content-footer .footer-contact{
+	background-image:url("../images/icones/mail.png");
+	background-repeat:no-repeat;
+	background-position:left center;
+	
+	margin-top:5px;
+	padding-left:23px;
+	min-height:16px;
+}
+
+#footer #content-footer .last-content-footer a:hover{
+	color:#0026FF;
+}
+
+/*
+ * Fin définition footer
+ */
+
+/*
+ * Début définition popup
+ */
+
+.popup, .background-popup{
+	display:none;
+}
+
+.background-popup{
+	position:fixed;
+	top:0;
+	left:0;
+	background-image:url('../images/overlay_bg.png');
+	background-repeat:repeat;
+	height:100%;
+	width:100%;
+	z-index:10;
+}
+
+.popup{
+	position:fixed;
+	left:50%;
+	top:50%;
+	width:200px;
+	max-width:980px;
+	height:200px;
+	background-color:#478CD9;
+	z-index:20;
+	
+}
+
+.popup .close-popup{
+	position:absolute;
+	top:-18px;
+	right:-16px;
+	
+	width:32px;
+	height:31px;
+	background-image:url('../images/icones/close-overlay.png');
+}
+
+/*
+ * Fin définition popup
+ */
+ 
+ /*
+ * Début définition pagination
+ */
+
+.pagination{
+	margin:auto;
+	width:450px;
+	position:relative;
+}
+
+.pagination .navigation{
+	text-align:center;
+	position:relative;
+	border:1px dotted #478CD9;
+	border-bottom:none;
+}
+
+.pagination .navigation .page-precedente{
+	position:absolute;
+	left:0;
+	top:0;
+}
+
+.pagination .navigation .page-suivante{
+	position:absolute;
+	right:0;
+	top:0;
+}
+
+.pagination .navigation .current_page{
+	font-weight:bold;
+}
+
+.pagination .large-navigation{
+	padding-top:5px;
+	position:relative;
+	height:15px;
+	border:1px dotted #478CD9;
+	border-top:none;
+}
+
+.pagination .large-navigation div{
+	position:absolute;
+	top:0;
+}
+
+.large-navigation .aller-premiere-page{
+	left:0px;
+}
+
+.large-navigation .aller-derniere-page{
+	right:0px;
+}
+
+.pagination .lien-bleu a{
+	color:#478CD9;
+}
+
+.pagination .lien-bleu a:hover{
+	color:#F2AC43;
+}
+
+.pagination .all-pages a{
+	color:#478CD9;
+	text-decoration:none;
+}
+
+.pagination .all-pages a:visited{
+	color:#8BB8EA;
+}
+
+.pagination .all-pages a:hover{
+	color:#F2AC43;
+	text-decoration:underline;
+}
+
+/*
+ * Fin définition pagination
+ */
+ 

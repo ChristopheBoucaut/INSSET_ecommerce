@@ -1,0 +1,64 @@
+<?php
+	$class_grey=true; 
+?>
+<div class="page-admin-commande">
+	<h2>Liste des commandes</h2>
+	<table class="liste-commandes">
+		<thead>
+			<tr>
+				<th class="colonne-client">
+					<a class="<?php echo $this->filtre_client_css;?>" href="<?php echo $this->url_client?>">Client</a>
+				</th>
+				<th class="colonne-date">
+					<a class="<?php echo $this->filtre_date_css;?>" href="<?php echo $this->url_date?>">Date</a>
+				</th>
+				<th class="colonne-montant">Montant</th>
+				<th class="colonne-livraison">
+					<a class="<?php echo $this->filtre_etat_css;?>" href="<?php echo $this->url_etat?>">Livrer</a>
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+	   		<?php foreach($this->commandes as $commande):?>
+				<tr<?php 
+					$str = ' class="produit';
+					if($class_grey){
+						$str.=' ligne-grey';
+						$class_grey=false;
+					}else{
+						$class_grey=true;
+					}
+					$str.='"';
+					echo $str;
+				?>>
+					<td>
+						<a href="" title="Afficher les informations sur <?php echo strtoupper($commande->nom_client); ?>" class="info-bulle"><?php echo strtoupper($commande->nom_client); ?></a>
+						<span class="info-clients">
+							<a href="" class="close-info-bulle">x</a>
+							<span><?php echo strtoupper($commande->nom_client); ?></span>
+							<span><?php echo ucfirst($commande->prenom_client); ?></span><br/>
+							<span><?php echo $commande->mail_client; ?></span><br/>
+							<span><?php echo $commande->prix_total_commande; ?>€</span><br/>
+							<span><?php echo $commande->date_derniere_commande; ?></span>
+						</span>
+					</td>
+					<td><?php echo $commande->date_commande; ?></td>
+					<td><?php echo $commande->montant_total; ?>€</td>
+					<td>
+						<?php 
+							if($commande->etat_livraison==0){
+								echo "<a class='bouton' href='".$this->baseUrl('admin/envoyer')."?id_commande=".$commande->id_commande."' title='Envoie de la commande'>A livrer</a>";
+							}else{
+								echo "Livrée";
+							}
+						?>
+					</td>
+				</tr>
+			<?php endforeach;?>
+		</tbody>
+	</table>
+	<?php 
+		// Permet d'afficher le controlle de la pagination
+		echo $this->paginationControl($this->commandes, 'Elastic', 'pagination.phtml');
+	?>
+</div>
