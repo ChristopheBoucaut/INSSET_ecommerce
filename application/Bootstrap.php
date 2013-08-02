@@ -1,7 +1,8 @@
 <?php
 
 /**
-  * Classe de lancement de l'application
+  * Classe de lancement d'une application Zend Framework 1
+  * 
   * @class: Bootstrap
   * @file: Bootstrap.php
   * @author : Christophe BOUCAUT
