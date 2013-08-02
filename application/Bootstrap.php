@@ -1,7 +1,7 @@
 <?php
 
 /**
-  * Classe de lancement d'une application Zend Framework 1
+  * Classe de lancement trop cool d'une application Zend Framework 1
   * 
   * @class: Bootstrap
   * @file: Bootstrap.php
