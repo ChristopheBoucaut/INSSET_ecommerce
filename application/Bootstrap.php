@@ -11,7 +11,7 @@
   * Rev 1.0 du 12 nov. 2012
   * - Version initiale
   *
- **/
+  **/
 
 class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 {
